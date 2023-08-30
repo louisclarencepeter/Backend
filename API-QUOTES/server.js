@@ -14,11 +14,22 @@ const quotes = [
   },
 ];
 
+app.use(express.json());
+
 app.get("/api/quotes", (req, res) => {
   return res.send(quotes);
 });
 
 app.post("/api/quotes/add", (req, res) => {
+  console.log("request object", req.body);
+
+  const newQuotes = {
+    quote: req.body.quote, //use body information
+    author: req.body.author, //use body information
+  };
+
+  quotes.push(newQuotes);
+
   return res.send("Post created");
 });
 
