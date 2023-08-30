@@ -18,6 +18,10 @@ app.get("/api/quotes", (req, res) => {
   return res.send(quotes);
 });
 
+app.post("/api/quotes/add", (req, res) => {
+  return res.send("Post created");
+});
+
 //listen for requests pm port 3001
 app.listen(3001, () => {
   console.log("The server is listening for requests...");
