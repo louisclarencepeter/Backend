@@ -8,4 +8,5 @@ const HotelSchema = new Schema({
     city: { type: String, required: true },
     country: { type: String, required: true },
   },
+  stars: { type: Number, min: 1, max: 5, default: 1 },
 });
