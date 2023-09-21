@@ -9,4 +9,13 @@ const HotelSchema = new Schema({
     country: { type: String, required: true },
   },
   stars: { type: Number, min: 1, max: 5, default: 1 },
+  services: {
+    hasParking:Boolean,
+    hasRestaurant:Boolean,
+    hasRoomService:Boolean,
+  }
 });
+
+const HotelModel = model("Hotel", HotelSchema);
+
+export default Hotel;
