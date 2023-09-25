@@ -20,4 +20,5 @@ const RoomSchema = new Schema({
     hasParking: { type: Boolean, required: true },
     hasPool: { type: Boolean, required: true },
   },
+  rooms : [RoomSchema]
 });
